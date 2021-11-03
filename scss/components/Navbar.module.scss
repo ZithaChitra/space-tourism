@@ -1,0 +1,150 @@
+@use "../util" as *;
+
+.navbar {
+  width: 100%;
+  height: rem(96);
+  
+  @include breakpoints-up(large){
+    margin-top: rem(40);
+  }
+
+
+  // hamburger menu styles
+  &.open{
+    
+    .navbar__toggle{
+
+
+      >span:first-child{
+        width: 100%;
+        transform: rotate(45deg);
+        margin-bottom: 0;
+
+      }
+
+      >span:nth-child(2){
+        opacity: 0;
+      }
+
+      >span:last-child{
+        width: 100%;
+        transform: rotate(-45deg);
+      }
+    }
+
+  }
+
+
+  &__logo {
+    position: relative;
+    width: rem(48);
+    height: rem(48);
+    margin-left: rem(24);
+    
+    @include breakpoints-up(large){
+      margin-left: rem(55);
+    }
+  }
+
+  a {
+    // display: inline-block;
+    position: relative;
+    height: 100%;
+    font-family: var(--barlow);
+    letter-spacing: rem(2.7);
+    color: white;
+    transition: all ease-in-out 3s;
+    
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+  }
+  
+  &__links {
+    
+    &-primary {
+      position: relative;
+      height: 100%;
+      width: rem(450);
+      font-size: rem(14);
+      padding-left: rem(48);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(rem(32));
+      
+      @include breakpoints-up(large){
+        width: rem(825);
+        padding-left: rem(124);
+        
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          top: rem(48);
+          left: - rem(369);
+          width: rem(400);
+          height: rem(1);
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(rem(32));
+        }
+      }
+
+
+      a {
+        &:not(:last-child) {
+          margin-right: rem(37);
+
+          @include breakpoints-up(large){
+            margin-right: rem(50);
+          }
+        }
+
+        &:hover{
+
+          &::before{
+            display: block;
+          }
+
+        }
+
+        &::before {
+          display: none;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: rem(3);
+          background-color: white;
+        }
+
+        span {
+          display: none;
+          margin-right: rem(11);
+          font-weight: bold;
+
+          @include breakpoints-up(large){
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    margin-right: rem(24);
+    position: relative;
+
+    span {
+      display: block;
+      background: var(--lavender-blue);
+      height: rem(3);
+      width: rem(24);
+      transform-origin: 0%;
+
+      &:not(:last-child) {
+        margin-bottom: rem(6);
+      }
+
+    }
+  }
+}
