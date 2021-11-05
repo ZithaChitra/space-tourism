@@ -1,15 +1,19 @@
 @use "../util" as *;
 
 .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: rem(96);
+  z-index: 1;
   
   @include breakpoints-up(large){
     margin-top: rem(40);
   }
 
 
-  // hamburger menu styles
+  // hamburger open menu styles
   &.open{
     
     .navbar__toggle{
@@ -90,8 +94,20 @@
         }
       }
 
+    //   .active{
+
+    //     a::before{
+    //       display: block;
+    //   }
+    // }
+
 
       a {
+
+        &.active::before{
+          display: block;
+        }
+
         &:not(:last-child) {
           margin-right: rem(37);
 

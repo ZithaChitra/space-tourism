@@ -1,0 +1,8 @@
+@use  '../util' as *;
+
+.home{
+    z-index: 0;
+    width: 100vw;
+    min-height: 100vh;    
+    background: url('../../public/assets/home/background-home-desktop.jpg');
+}
