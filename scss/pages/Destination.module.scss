@@ -3,6 +3,85 @@
 .dest{
     z-index: 0;
     width: 100vw;
-    min-height: 100vh;    
+    min-height: 100vh;  
+    padding-top: rem(88);  
     background: url('../../public/assets/destination/background-destination-desktop.jpg');
+
+    h5{
+        font-family: var(--barlow);
+        text-transform: uppercase;
+        font-size: rem(16);
+        text-align: center;
+        letter-spacing: rem(2.7);
+
+        span{
+            color: #FFFFFF;
+        }
+        
+    }
+
+    &__image{
+        position: relative;
+        width: rem(170);
+        height: rem(170);
+        margin-bottom: rem(26);
+    }
+
+
+    &__details{
+
+        &-nav{
+            margin-bottom: rem(20);
+        }
+        h2{
+            text-align: center;
+            font-size: rem(56);
+            margin-bottom: rem(16);
+            font-family: var(--bellefair);
+        }
+
+        p{
+            width: calc(100% - rem(48));
+            padding-bottom: rem(33);
+            border-bottom: 1px solid white;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        &-numbers{
+            margin-top: rem(32);
+            span{
+                display: block;
+                text-transform: uppercase;
+            }
+
+            >div{
+                &:not(:last-child){
+                    margin-bottom: rem(40);
+                }
+            }
+        }
+
+        &-number{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span{
+                &:first-child{
+                    color: var(--lavender-blue);
+                    font-size: rem(14);
+                    letter-spacing: rem(2.36);
+                    margin-bottom: rem(12);
+                }
+
+                &:last-child{
+                    color: white;
+                    font-size: rem(28);
+                }
+            }
+        }
+
+        
+    }
 }

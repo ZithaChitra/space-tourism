@@ -1,0 +1,85 @@
+@use '../util' as *;
+
+.nav{
+    &__strings{
+        height: rem(28);
+
+        a{
+            position: relative;
+            margin-bottom: rem(20);
+            height: 100%;
+            text-transform: uppercase;
+            font-size: rem(14);
+            font-family: var(--barlow);
+            letter-spacing: rem(2.36);
+            color: var(--lavender-blue);
+
+
+            &:not(:last-child){
+                margin-right: rem(19);
+            }
+
+            &:hover{
+                color: white;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                height: rem(3);
+                width: rem(36);
+                background: white;
+            }
+
+        }
+
+    }
+
+
+    &__numbers{
+        a{
+            width: rem(40);
+            height: rem(40);
+            border: rem(1) solid white;
+            border-radius: 50%;
+            font-family: var(--bellefair);
+            font-size: rem(16);
+
+            &:not(:last-child){
+                margin-right: rem(16);
+            }
+
+            &:hover{
+                color: var(--rich-black);
+                background: white;
+            }
+        }
+
+    }
+
+
+    &__discs{
+        a{
+            display: block;
+            width: rem(10);
+            height: rem(10);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(rem(32));
+            
+            &:not(:last-child){
+                margin-right: rem(31);
+            }
+
+
+            &:hover{
+                background: white;
+                backdrop-filter: unset;
+            }
+
+        }
+    }
+}
