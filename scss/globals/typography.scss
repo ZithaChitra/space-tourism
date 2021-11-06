@@ -1,49 +1,54 @@
-@use '../util' as *;
+@use "../util" as *;
 
 h1,
 h2,
-h3, h4 {
-	margin: 0;
-	line-height: 1.1;
-	// font-family: var(--bellefair);
-	text-transform: uppercase;
-	color: white;
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.1;
+  // font-family: var(--bellefair);
+  text-transform: uppercase;
+  color: white;
 }
 
-h1{
-	// font-size: rem(150);
+h1 {
+  // font-size: rem(150);
 }
 
-h2{
-	// font-size: rem(100);
-	// font-weight: 56;
+h2 {
+  // font-size: rem(100);
+  // font-weight: 56;
 }
 
-h3{
-	// font-size: rem(56);
+h3 {
+  // font-size: rem(56);
 }
 
-h4{
-	// font-size: rem(32);
+h4 {
+  // font-size: rem(32);
 }
 
-h5{
-	margin-top: 0;
-	font-family: var(--barlow);
-	color: white;
+h5 {
+  margin-top: 0;
+  font-family: var(--barlow);
+  color: white;
 }
 
-p{
-	color: var(--lavender-blue);
-	line-height: rem(25);
+p {
+  color: var(--lavender-blue);
+  line-height: rem(25);
+  font-size: rem(15);
+  text-align: center;
 
+  @include breakpoints-up(medium){
+	font-size: rem(16);
+	line-height: rem(28);
+  }
 }
-
-
 
 a,
 a:visited,
 a:active {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
