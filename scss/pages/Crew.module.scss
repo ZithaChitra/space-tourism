@@ -1,8 +1,52 @@
-@use  '../util' as *;
+@use "../util" as *;
 
-.crew{
-    z-index: 0;
-    width: 100vw;
-    min-height: 100vh;    
-    background: url('../../public/assets/crew/background-crew-desktop.jpg');
+.crew {
+  z-index: 0;
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: rem(88);
+  background: url("../../public/assets/crew/background-crew-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include breakpoints-up(medium) {
+    padding-top: rem(136);
+    background: url("../../public/assets/crew/background-crew-tablet.jpg")
+      cover no-repeat;
+  }
+
+  @include breakpoints-up(large) {
+    background: url("../../public/assets/crew/background-crew-desktop.jpg")
+      cover no-repeat;
+  }
+
+  &__image {
+    --width: calc(100% - rem(48));
+    position: relative;
+    width: calc(100% - rem(48));
+    height: calc(0.68 * calc(100% - rem(48)));
+    margin: auto;
+    margin-bottom: rem(32);
+  }
+
+  &__details {
+    &-navinpage {
+      margin-bottom: rem(32);
+    }
+
+    h4 {
+      font-family: var(--bellefair);
+      text-align: center;
+      margin-bottom: rem(12);
+      color: var(--gray);
+      font-size: rem(16);
+    }
+
+    h3 {
+      font-family: var(--bellefair);
+      text-align: center;
+      font-size: rem(24);
+      margin-bottom: rem(16);
+    }
+  }
 }

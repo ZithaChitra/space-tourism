@@ -67,7 +67,7 @@
             width: rem(10);
             height: rem(10);
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--gray);
             backdrop-filter: blur(rem(32));
             
             &:not(:last-child){
